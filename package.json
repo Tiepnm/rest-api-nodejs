@@ -1,0 +1,44 @@
+{
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "An API built with NodeJS, Express, MongoDB and TypeScript",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "ts-node ./src/server.ts",
+    "server": "tsc --watch | nodemon --inspect ./dist/server.js --watch dist",
+    "start": "nodemon ./dist/server.js",
+    "prod": "set NODE_ENV=production&& npm run build && npm run start",
+    "test1": "ts-node ./src/test/test.ts"
+  },
+  "keywords": [
+    "Dale",
+    "Nguyen"
+  ],
+  "author": "Dale Nguyen <dungnq@itbox4vn.com> (http://dalenguyen.me)",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.11.1",
+    "@types/superagent": "^3.8.3",
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "config": "^1.30.0",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.0.14",
+    "mongoose-transactions": "^1.1.1",
+    "nodemon": "^1.17.3",
+    "superagent": "^3.8.3",
+    "ts-node": "^7.0.0",
+    "typescript-ioc": "^1.2.4",
+    "ws": "^4.0.0",
+    "oauth2-server": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.0",
+    "@types/mocha": "^5.2.5",
+    "@types/ws": "^4.0.0",
+    "typescript": "^2.6.2"
+  }
+}

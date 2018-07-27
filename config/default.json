@@ -1,0 +1,17 @@
+{
+  // Customer module configs
+  "Customer": {
+    "port":3000,
+    "dbConfig": {
+      "host": "localhost",
+      "port": 5984,
+      "dbName": "customers",
+      "mongoUrl":"mongodb://localhost/CRMdb"
+    },
+    "credit": {
+      "initialLimit": 100,
+      // Set low for development
+      "initialDays": 1
+    }
+  }
+}

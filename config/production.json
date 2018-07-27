@@ -1,0 +1,12 @@
+{
+  "Customer": {
+    "port":9000,
+    "dbConfig": {
+      "host": "prod-db-server",
+       "mongoUrl":"mongodb://tiep:ngmanhtiep1@ds239911.mlab.com:39911/crmdb"
+    },
+    "credit": {
+      "initialDays": 30
+    }
+  }
+}
