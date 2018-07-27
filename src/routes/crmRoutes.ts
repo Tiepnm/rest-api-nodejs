@@ -4,7 +4,7 @@ import { ContactController } from "../controllers/crmController";
 export class Routes {
     
     public contactController: ContactController = new ContactController()
-     middleware : any = function (req: Request, res: Response, next: NextFunction) {
+     middleware : any = function (req: any, res: Response, next: NextFunction) {
         // middleware
         console.log(`Request from: ${req.originalUrl}`);
         console.log(`Request type: ${req.method}`);

@@ -16,10 +16,7 @@ export const Token = new Schema({
         type: String
 
     },
-    expires: {
-        type: Date
 
-    },
     user:{
         type: User
     }

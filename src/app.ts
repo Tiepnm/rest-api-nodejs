@@ -30,19 +30,19 @@ import * as config from 'config'
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({extended: true}));
 
-        this.app.oauth = this.oauthserver({
+        var oauth = this.oauthserver({
             model: require('./models/auth.js'),
             grants: ['password','refresh_token'],
             debug: true
         });
-        this.app.all('/oauth/token', this.app.oauth.grant());
+        this.app.all('/oauth/token', oauth.grant());
 
-        this.app.use(this.app.oauth.authorise());
+        this.app.use(oauth.authorise());
         // this.app.get('/', this.app.oauth.authorise(), function (req, res) {
         //     res.send('Congratulations, you are in a secret area!');
         // });
-        this.app.use(this.app.oauth.errorHandler());
-        // serving static files 
+        this.app.use(oauth.errorHandler());
+        // serving static files
        // this.app.use(express.static('public'));
         this.app.use(express.static('public/.well-known/acme-challenge'))
         this.app.get('/oauth/authorise', function (req, res, next) {
